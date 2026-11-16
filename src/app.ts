@@ -4,7 +4,6 @@ import cors from "cors";
 
 import { errorMiddleware } from "./middlewares/error.middleware";
 import documentRouter from './app/document/document.router';
-import aiRouter from './app/ai/ai.route';
 import ragRouter from './app/rag/rag.router';
 
 export class App {
@@ -29,7 +28,6 @@ export class App {
 
     private initializeRoutes(){
         this.app.use("/api/document", documentRouter);
-        this.app.use("/api/ai", aiRouter);
         this.app.use("/api/rag", ragRouter);
     }
 

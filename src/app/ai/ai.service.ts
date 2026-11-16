@@ -13,7 +13,7 @@ export class AIService{
          User Question:
          ${question}
         `;
-        const jsonFormat = JSON.parse(await this.aIProvider.generate(prompt))
+        const jsonFormat = JSON.parse(await this.aIProvider.generate(prompt,""))
         return jsonFormat?.answer;
     }
 }
